@@ -1,0 +1,72 @@
+
+#nav {
+	margin:0; 
+	padding:0; 
+	list-style:none;
+}	
+
+#nav li {
+	float:left; 
+	display:block; 
+	width:250px; 	
+	position:relative;
+	z-index:500;
+	margin:0 0px;
+}
+
+/* this is the parent menu */
+#nav li a {
+	display:block;  
+	padding:10 10 10 10;
+	text-decoration:none; 
+	color:#fff; 
+	text-align:left; 
+}
+
+#nav li a:hover {
+	color:#fff;
+}
+
+/* you can make a different style for default selected value */
+#nav a.selected {
+	color:#f00;
+}
+
+/* submenu, it's hidden by default */
+#nav ul {
+	position:absolute; 
+	left:0; 
+	display:none; 
+	margin:0 0 0 0px; 
+	padding:0; 
+	list-style:none;
+	background-color:#efefef;
+	border:1px solid #cdcdcd;
+}
+
+#nav ul li {
+	width:250px; 
+	float:left;  
+	padding:5 10 5 10;
+}
+ 
+/* display block will make the link fill the whole area of LI */
+#nav ul a {;
+	color:#333;
+	font-family:ralewaybold;
+	font-size:13;
+	display:block;  
+	padding: 5px 10px 5 10px; 
+}
+
+#nav ul a:hover {
+	color:#fff;
+	background-color:#76ba25;
+}
+
+/* fix ie6 small issue */
+/* we should always avoid using hack like this */
+/* should put it into separate file : ) */
+*html #nav ul {
+	margin:0 0 0 -2px;
+}
