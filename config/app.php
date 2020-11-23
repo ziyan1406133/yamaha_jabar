@@ -1,5 +1,7 @@
 <?php
 
+use App\Providers\HelperServiceProvider;
+
 return [
 
     /*
@@ -165,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        App\Providers\HelperServiceProvider::class,
         /*
          * Application Service Providers...
          */

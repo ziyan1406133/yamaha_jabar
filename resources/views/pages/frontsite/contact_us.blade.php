@@ -18,23 +18,20 @@
         </div>
         
         
-        <form id = "contactform" method = "post" action = "http://yamaha-jatim.co.id/contact"> 			
+        <form id = "contactform" method="post" action = "{{ route('message.store') }}"> 		
+            @csrf	
         <table width=960px border=0 style="line-height:20px;margin:40px 0 50px 0;">
         <tr>
             <td width=320px>
-                <input type="text" name="sender_name" required placeholder="Name" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
-                <input type="email" name="sender_email" required placeholder="Email Address" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
-                <input type="text" name="sender_company" placeholder="Company" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
-                <input type="text" name="sender_telp" placeholder="Telp" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
-                <input type="text" name="sender_fax" placeholder="Fax" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
+                <input type="text" name="name" required placeholder="Name" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
+                <input type="email" name="email" required placeholder="Email Address" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
+                <input type="text" name="company" placeholder="Company" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
+                <input type="text" name="phone" placeholder="Telp" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
+                <input type="text" name="fax" placeholder="Fax" value="" style="margin:0px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:250px;border-radius:5px;"/>
             </td>
             <td valign=top>
-                <textarea name="sender_address" placeholder="Address" style="width:300px;height:153px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;border:1px solid #dedede;padding:10px 20px 10px 20px;border-radius:5px;resize:none;"/></textarea>
-    
-                <div>
-                    <img src = "code.jpg" height = "38px" style="margin-top:-3px;">
-                    <input type="text" name="sender_code" maxlength=5 value="" placeholder="ENTER CODE" required style="text-transform:uppercase;margin:15px 0px 15px 0px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;padding:10px 20px 10px 20px;width:120px;border-radius:5px;"/>
-                </div>
+                <textarea name="content" required placeholder="Message" style="width:300px;height:200px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;border:1px solid #dedede;padding:10px 20px 10px 20px;border-radius:5px;resize:none;" maxlength="255"/></textarea>
+
             </td>
             <td rowspan=2 valign=top>
             
@@ -62,7 +59,7 @@
         </tr>
         <tr>
             <td>
-                <textarea name="sender_message" placeholder="Message" style="margin:0px 0px 15px 0px;width:250px;height:116px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;border:1px solid #dedede;padding:10px 20px 10px 20px;border-radius:5px;resize:none;"/></textarea>
+                <textarea name="address" placeholder="Address" style="margin:0px 0px 15px 0px;width:250px;height:116px;font-family:ralewaylight;font-size:13px;border:1px solid #dedede;border:1px solid #dedede;padding:10px 20px 10px 20px;border-radius:5px;resize:none;" maxlength="255"/></textarea>
             </td>
             <td valign=top>		
             </td>
@@ -70,8 +67,8 @@
         <tr>
             <td colspan=2 align=right>			
                 <div style="margin:0px 20px 0px 0px;">						
-                    <div class="icon" style="display:inline-block;vertical-align:middle;"><input type="reset" name="btnsubmit" value="RESET" class="transp" style="margin:0px 10px 0px 0px;font-family:ralewaybold;font-size:14px;color:#fff;background-color:#7c7c7c;width:113px;height:37px;cursor:pointer;border:0px solid;font-style:italic;border-radius:5px;"/></div>
-                    <div class="icon" style="display:inline-block;vertical-align:middle;"><input type="submit" name="btnsubmit" value="SEND" class="transp" style="font-family:ralewaybold;font-size:14px;color:#fff;background-color:#163f6e;width:113px;height:37px;cursor:pointer;border:0px solid;border-radius:5px;"/></div>													
+                    <div class="icon" style="display:inline-block;vertical-align:middle;"><input type="reset" value="RESET" id="reset" class="transp" style="margin:0px 10px 0px 0px;font-family:ralewaybold;font-size:14px;color:#fff;background-color:#7c7c7c;width:113px;height:37px;cursor:pointer;border:0px solid;font-style:italic;border-radius:5px;"/></div>
+                    <div class="icon" style="display:inline-block;vertical-align:middle;"><input type="submit" value="SEND" class="transp" style="font-family:ralewaybold;font-size:14px;color:#fff;background-color:#163f6e;width:113px;height:37px;cursor:pointer;border:0px solid;border-radius:5px;"/></div>													
                 </div>
             </td>
             <td>
@@ -124,5 +121,5 @@
  @endsection
 
  @section('foot')
-     
+
  @endsection

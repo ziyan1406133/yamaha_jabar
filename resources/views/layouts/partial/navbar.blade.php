@@ -72,22 +72,6 @@
 				<td valign=bottom style="padding:0px 0px 15px 0px;">
 					<img src="images/separator.png">
 				</td>
-				<td valign=bottom align=center>					
-					<div id='cssmenu'>
-					<ul>
-					   <li class='has-sub'><a href='news.html' ><span>ACTIVITY</span></a>
-						  <ul>
-							 <li><a href='news.html'><span>NEWS</span></a></li>
-							 <li><a href='event.html'><span>EVENT</span></a></li>
-							 <li><a href='gallery.html'><span>GALLERY</span></a></li>
-						  </ul>
-					   </li>
-					</ul>
-					</div>
-				</td>
-				<td valign=bottom style="padding:0px 0px 15px 0px;">
-					<img src="images/separator.png">
-				</td>
 				<td valign=bottom align=center>
 					<div id='cssmenu'>
 					<ul>

@@ -5,7 +5,7 @@
 <!-- Mirrored from yamaha-jatim.co.id/home by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2020 06:32:41 GMT -->
 <head>
 		<base >
-	<title>YAMAHA JATIM</title>
+	<title>Yamaha Jabar</title>
 	
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<meta name="format-detection" content="telephone=no">	

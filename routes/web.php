@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +17,16 @@ Route::get('/', 'HomeController@index')->name('homepage');
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@dashbaord')->name('dashboard');
+Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::get('/contact_us', 'HomeController@contact_us')->name('contact_us');
+
+Route::resource('pengguna', 'Backsite\UserController');
+Route::resource('partner-region', 'Backsite\RegionController');
+Route::resource('partner-network', 'Backsite\NetworkController');
+Route::resource('product', 'Backsite\ProductController');
+Route::resource('message', 'Backsite\MessageController');
+
+Route::post('feature', 'Backsite\FeatureController@store')->name('feature.store');
+Route::delete('feature/{id}', 'Backsite\FeatureController@destroy')->name('feature.destroy');
+Route::post('color', 'Backsite\ColorController@store')->name('color.store');
+Route::delete('color/{id}', 'Backsite\ColorController@destroy')->name('color.destroy');
