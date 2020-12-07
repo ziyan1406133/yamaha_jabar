@@ -13,7 +13,7 @@
 				<meta name = "description" content = "PT. SURYA TIMUR SAKTI JATIM selaku main dealer motor di Surabaya membuat Website ini dengan sebuah tujuan penting, yakni agar dapat lebih dekat lagi dengan Anda, para pelanggan yang begitu kami istimewakan.Sebuah kebanggaan bagi PT SURYA TIMUR SAKTI JATIM untuk dapat menyambut Anda bergabung menikmati situs kami. Melalui situs ini, Anda dapat menyimak berita terbaru mengenai produk YAMAHA, mengetahui aneka tips n trick, mencari lokasi sales dan service, serta banyak info menarik lain. Anda juga diberi kesempatan untuk berkomentar, memberi masukan ataupun bertanya secara langsung kepada kami melalui customer forum. Dukungan dan kepuasan Anda merupakan motivator kami untuk terus berkarya, berinovasi dan menjadi yang terdepan dalam pelayanan. Terima kasih atas kunjungan dan kepercayaan Anda. Selamat menikmati situs kami.">
 				<meta name = "keywords" content = "">	<meta name = "author" content = "KiboCreative">
 	<meta name = "copyright" content = "KiboCreative">
-	<meta name = "title" content = "YAMAHA JATIM">
+	<meta name = "title" content = "YAMAHA Jabar">
 	<link rel = "shortcut icon" href = "{{ asset('images/icon.html') }}">
 
 	
@@ -23,7 +23,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>	
 	<link rel="stylesheet" href="{{ asset('css/font/raleway/stylesheet.css') }}" type = "text/css">
 	<link rel="stylesheet" href="{{ asset('css/font/oswald/stylesheet.css') }}" type = "text/css">	
-
+	<link rel="stylesheet" href="{{ asset('klorofilTemplate/assets/vendor/bootstrap/css/bootstrap.min.css') }}">
 	<!-- JQUERY -->		
 	<script type = "text/javascript" src = "{{ asset('jui/jquery-1.10.1.min.js') }}"></script>
 	
@@ -31,7 +31,7 @@
 	<!-- DROP DOWN MENU -->
 	<script src="{{ asset('css/dropdown/jquery-latest.min.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('css/dropdown/dropdown.js') }}"></script>
-	<link rel="stylesheet" href="css/dropdown/dropdown.css">
+	<link rel="stylesheet" href="{{ asset('css/dropdown/dropdown.css') }}">
 	
 	
 	<!-- DROP DOWN MENU -->

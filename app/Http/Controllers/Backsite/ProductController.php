@@ -53,6 +53,7 @@ class ProductController extends Controller
         $produk = new Product;
         $produk->category_id = $request->category_id;
         $produk->name = $request->name;
+        $produk->tvc = $request->tvc;
         
         $image_name	= time().'_'.rand(100,999).'.png';
         $request->file('cover')->move('public/images/products/cover/', $image_name);
@@ -61,6 +62,14 @@ class ProductController extends Controller
         $image_name	= time().'_'.rand(100,999).'.png';
         $request->file('slider')->move('public/images/products/slider/', $image_name);
         $produk->slider = 'images/products/slider/'.$image_name;
+
+        $image_name	= time().'_'.rand(100,999).'.png';
+        $request->file('logo')->move('public/images/products/logo/', $image_name);
+        $produk->logo = 'images/products/logo/'.$image_name;
+
+        $image_name	= time().'_'.rand(100,999).'.png';
+        $request->file('spec')->move('public/images/products/spec/', $image_name);
+        $produk->spec = 'images/products/spec/'.$image_name;
 
         $produk->save();
 
@@ -105,12 +114,15 @@ class ProductController extends Controller
         $produk = Product::find($id);
         $produk->category_id = $request->category_id;
         $produk->name = $request->name;
+        $produk->tvc = $request->tvc;
         
         if($request->hasFile('cover')) {
 
-            $file = public_path($produk->cover);
-            if (file_exists($file)) {
-                unlink($file);
+            if($produk->cover !== null) {
+                $file = public_path($produk->cover);
+                if (file_exists($file)) {
+                    unlink($file);
+                }
             }
 
             $image_name	= time().'_'.rand(100,999).'.png';
@@ -120,15 +132,44 @@ class ProductController extends Controller
 
         if($request->hasFile('slider')) {
 
-            $file = public_path($produk->slider);
-            if (file_exists($file)) {
-                unlink($file);
+            if($produk->slider !== null) {
+                $file = public_path($produk->slider);
+                if (file_exists($file)) {
+                    unlink($file);
+                }
             }
 
             $image_name	= time().'_'.rand(100,999).'.png';
             $request->file('slider')->move('public/images/products/slider/', $image_name);
             $produk->slider = 'images/products/slider/'.$image_name;
         }
+        if($request->hasFile('logo')) {
+
+            if($produk->logo !== null) {
+                $file = public_path($produk->logo);
+                if (file_exists($file)) {
+                    unlink($file);
+                }
+            }
+            $image_name	= time().'_'.rand(100,999).'.png';
+            $request->file('logo')->move('public/images/products/logo/', $image_name);
+            $produk->logo = 'images/products/logo/'.$image_name;
+        }
+
+        if($request->hasFile('spec')) {
+
+            if($produk->spec !== null) {
+                $file = public_path($produk->spec);
+                if (file_exists($file)) {
+                    unlink($file);
+                }
+            }
+
+            $image_name	= time().'_'.rand(100,999).'.png';
+            $request->file('spec')->move('public/images/products/spec/', $image_name);
+            $produk->spec = 'images/products/spec/'.$image_name;
+        }
+
         $produk->save();
 
         return redirect()->route('product.show', $produk->id)->with('success', 'Produk Berhasil Diperbaharui');

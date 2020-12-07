@@ -1625,244 +1625,16 @@
                 </table>		
         </div>
         
-        <div style="width:100%;background-image:url({{ asset('images/bg-corak.png') }});background-repeat:no-repeat;background-size:100% auto;padding:15px 0 40px 0;">				
-            <div style="width:960px;background-color:rgba(255,255,255,0.5);padding:15px 0 0px 0;">
-                <div style="font-family:oswaldbold;color:#2e6a97;font-size:20px;margin-bottom:10px;">
-                    NEWS & EVENTS
-                </div>
-                
-                <div id="slider1_container" style="border:0px solid #222;position: relative; top: 0px; left: 0px; width: 935px; height: 215px;margin:0 0 0 0;">
-                    <div u="slides" style="cursor: move;  width: 940px; height: 215px; overflow: hidden;">
-                
-                            <div style="border:4px solid #ededed;">
-                                <a href="news-detail/154/Terus-Prioritaskan-Konsumen-Yamaha-Kembali-dengan-Berbagai-Promo.html">							
-                                    <div style="background-image:url({{ asset('data/news_thumb/154.png') }});height:70px;background-size:cover;background-position:center center;background-repeat:no-repeat;">									
-                                    </div>
-                                </a>
-                                <div style="padding:10px 10px 0 10px;">
-                                    <div style="font-family:oswaldbold;font-size:18px;color:#2e6a97;text-align:left;margin:5px 0 0 0;text-transform:uppercase;height:28px;overflow:hidden;">
-                                        Terus Prioritaskan Konsumen, Yamaha Kembali dengan Berbagai Promo
-                                    </div>
-                                    <div style="font-family:open sans;font-weight:600;font-size:11px;color:#363636;text-align:left;height:45px;overflow:hidden;">
-                                        Memasuki kondisi new normal, PT Surya Timur Sakti Jatim (Yamaha Jatim) semakin gencar memberikan promo spesial bagi seluruh masyarakat. Berbagai penawaran menarik bisa dimanfaatkan konsumen yang ingin membeli motor pada bulan Juli ini, mulai dari uang muka ringan hingga potongan angsuran untuk berbagai unit motor Yamaha.
-                                    </div>
-                                    <table width=100% cellpadding=0 cellspacing=0 style="margin:10px 0 5px 0;">
-                                    <tr>
-                                        <td align=left>									
-                                            <div style="font-family:open sans;font-weight:600;font-size:11px;color:#3d3d3d;text-transform:uppercase;">
-                                                Surabaya - 14/07/2020
-                                            </div>
-                                        </td>
-                                        <td align=right>	
-                                            <a href="news-detail/154/Terus-Prioritaskan-Konsumen-Yamaha-Kembali-dengan-Berbagai-Promo.html">							
-                                            <div class="transp" style="font-family:oswaldbold;font-size:12px;color:#2e6a97;background-image:url({{ asset('images/arrow-blue.png') }});background-repeat:no-repeat;background-position:center left;width:70px;">
-                                                READ MORE
-                                            </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div style="border:4px solid #ededed;">
-                                <a href="news-detail/153/Peduli-Kesehatan-Yamaha-Jatim-Adakan-Rapid-Test-Untuk-Seluruh-Karyawan.html">							
-                                    <div style="background-image:url({{ asset('data/news_thumb/153.jpg') }});height:70px;background-size:cover;background-position:center center;background-repeat:no-repeat;">									
-                                    </div>
-                                </a>
-                                <div style="padding:10px 10px 0 10px;">
-                                    <div style="font-family:oswaldbold;font-size:18px;color:#2e6a97;text-align:left;margin:5px 0 0 0;text-transform:uppercase;height:28px;overflow:hidden;">
-                                        Peduli Kesehatan, Yamaha Jatim Adakan Rapid Test Untuk Seluruh Karyawan
-                                    </div>
-                                    <div style="font-family:open sans;font-weight:600;font-size:11px;color:#363636;text-align:left;height:45px;overflow:hidden;">
-                                        Pandemi Corona yang belum selesai menyebabkan masyarakat terus merasa khawatir akan penularannya. Namun di sisi lain, kegiatan sehari-hari juga harus berjalan agar roda perekonomian tetap berputar. Sebagai prioritas utama, PT Surya Timur Sakti Jatim (Yamaha Jatim) berinisiatif mengadakan rapid test untuk seluruh karyawannya.
-                                    </div>
-                                    <table width=100% cellpadding=0 cellspacing=0 style="margin:10px 0 5px 0;">
-                                    <tr>
-                                        <td align=left>									
-                                            <div style="font-family:open sans;font-weight:600;font-size:11px;color:#3d3d3d;text-transform:uppercase;">
-                                                Surabaya - 12/07/2020
-                                            </div>
-                                        </td>
-                                        <td align=right>	
-                                            <a href="news-detail/153/Peduli-Kesehatan-Yamaha-Jatim-Adakan-Rapid-Test-Untuk-Seluruh-Karyawan.html">							
-                                            <div class="transp" style="font-family:oswaldbold;font-size:12px;color:#2e6a97;background-image:url({{ asset('images/arrow-blue.png') }});background-repeat:no-repeat;background-position:center left;width:70px;">
-                                                READ MORE
-                                            </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div style="border:4px solid #ededed;">
-                                <a href="news-detail/151/Special-Sale-Suku-Cadang-Yamaha-di-Bulan-Juli.html">							
-                                    <div style="background-image:url({{ asset('data/news_thumb/151.jpg') }});height:70px;background-size:cover;background-position:center center;background-repeat:no-repeat;">									
-                                    </div>
-                                </a>
-                                <div style="padding:10px 10px 0 10px;">
-                                    <div style="font-family:oswaldbold;font-size:18px;color:#2e6a97;text-align:left;margin:5px 0 0 0;text-transform:uppercase;height:28px;overflow:hidden;">
-                                        Special Sale Suku Cadang Yamaha di Bulan Juli
-                                    </div>
-                                    <div style="font-family:open sans;font-weight:600;font-size:11px;color:#363636;text-align:left;height:45px;overflow:hidden;">
-                                        Untuk menjaga performa motor Yamaha tetap tangguh, menggunakan suku cadang asli menjadi hal wajib yang dilakukan para rider Yamaha. Penggunaan suku cadang yang tidak orisinil justru bisa menyebabkan motor lebih cepat rusak. Demi mendukung para rider untuk menggunakan yang asli, kali ini Yamaha Jatim memberikan diskon spesial untuk pembelian semua suku cadang.
-                                    </div>
-                                    <table width=100% cellpadding=0 cellspacing=0 style="margin:10px 0 5px 0;">
-                                    <tr>
-                                        <td align=left>									
-                                            <div style="font-family:open sans;font-weight:600;font-size:11px;color:#3d3d3d;text-transform:uppercase;">
-                                                Surabaya - 02/07/2020
-                                            </div>
-                                        </td>
-                                        <td align=right>	
-                                            <a href="news-detail/151/Special-Sale-Suku-Cadang-Yamaha-di-Bulan-Juli.html">							
-                                            <div class="transp" style="font-family:oswaldbold;font-size:12px;color:#2e6a97;background-image:url({{ asset('images/arrow-blue.png') }});background-repeat:no-repeat;background-position:center left;width:70px;">
-                                                READ MORE
-                                            </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div style="border:4px solid #ededed;">
-                                <a href="news-detail/149/Antusiasme-Meningkat-Yamaha-Beri-Keuntungan-Lebih-Bagi-A-Gen-125.html">							
-                                    <div style="background-image:url({{ asset('data/news_thumb/149.jpg') }});height:70px;background-size:cover;background-position:center center;background-repeat:no-repeat;">									
-                                    </div>
-                                </a>
-                                <div style="padding:10px 10px 0 10px;">
-                                    <div style="font-family:oswaldbold;font-size:18px;color:#2e6a97;text-align:left;margin:5px 0 0 0;text-transform:uppercase;height:28px;overflow:hidden;">
-                                        Antusiasme Meningkat, Yamaha Beri Keuntungan Lebih Bagi A-Gen 125
-                                    </div>
-                                    <div style="font-family:open sans;font-weight:600;font-size:11px;color:#363636;text-align:left;height:45px;overflow:hidden;">
-                                        Setelah diluncurkan pertama kali pada bulan Mei, antusiasme masyarakat untuk bergabung menjadi A-Gen 125 semakin hari semakin meningkat. Melihat hal ini, PT Surya Timur Sakti Jatim (Yamaha Jatim) melakukan inovasi pada programnya dengan peningkatan jumlah insentif bagi setiap agen.
-                                    </div>
-                                    <table width=100% cellpadding=0 cellspacing=0 style="margin:10px 0 5px 0;">
-                                    <tr>
-                                        <td align=left>									
-                                            <div style="font-family:open sans;font-weight:600;font-size:11px;color:#3d3d3d;text-transform:uppercase;">
-                                                Surabaya - 23/06/2020
-                                            </div>
-                                        </td>
-                                        <td align=right>	
-                                            <a href="news-detail/149/Antusiasme-Meningkat-Yamaha-Beri-Keuntungan-Lebih-Bagi-A-Gen-125.html">							
-                                            <div class="transp" style="font-family:oswaldbold;font-size:12px;color:#2e6a97;background-image:url({{ asset('images/arrow-blue.png') }});background-repeat:no-repeat;background-position:center left;width:70px;">
-                                                READ MORE
-                                            </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div style="border:4px solid #ededed;">
-                                <a href="news-detail/150/Yamaha-Promo-Besar-Besaran-Tawarkan-Diskon-Angsuran-Hingga-Bunga-0.html">							
-                                    <div style="background-image:url({{ asset('data/news_thumb/150.jpg') }});height:70px;background-size:cover;background-position:center center;background-repeat:no-repeat;">									
-                                    </div>
-                                </a>
-                                <div style="padding:10px 10px 0 10px;">
-                                    <div style="font-family:oswaldbold;font-size:18px;color:#2e6a97;text-align:left;margin:5px 0 0 0;text-transform:uppercase;height:28px;overflow:hidden;">
-                                        Yamaha Promo Besar-Besaran, Tawarkan Diskon Angsuran Hingga Bunga 0%
-                                    </div>
-                                    <div style="font-family:open sans;font-weight:600;font-size:11px;color:#363636;text-align:left;height:45px;overflow:hidden;">
-                                        Kebutuhan akan kendaraan pribadi saat ini semakin meningkat. Apalagi kondisi new normal yang menghimbau masyarakat untuk selalu menjaga jarak juga semakin gencar digalakkan. Untuk tetap memenuhi kebutuhan konsumen, PT Surya Timur Sakti Jatim (STSJ) memberikan berbagai penawaran spesial pembelian unit-unit Yamaha mulai dari potongan angsuran hingga bunga cicilan 0%.
-                                    </div>
-                                    <table width=100% cellpadding=0 cellspacing=0 style="margin:10px 0 5px 0;">
-                                    <tr>
-                                        <td align=left>									
-                                            <div style="font-family:open sans;font-weight:600;font-size:11px;color:#3d3d3d;text-transform:uppercase;">
-                                                Surabaya - 19/06/2020
-                                            </div>
-                                        </td>
-                                        <td align=right>	
-                                            <a href="news-detail/150/Yamaha-Promo-Besar-Besaran-Tawarkan-Diskon-Angsuran-Hingga-Bunga-0.html">							
-                                            <div class="transp" style="font-family:oswaldbold;font-size:12px;color:#2e6a97;background-image:url({{ asset('images/arrow-blue.png') }});background-repeat:no-repeat;background-position:center left;width:70px;">
-                                                READ MORE
-                                            </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div style="border:4px solid #ededed;">
-                                <a href="event-detail/45/Permudah-Konsumen-Yamaha-Luncurkan-Yamaha-Kaltim-Official-di-Tokopedia.html">							
-                                    <div style="background-image:url({{ asset('data/event_thumb/45.jpg') }});height:70px;background-size:cover;background-position:center center;background-repeat:no-repeat;">									
-                                    </div>
-                                </a>
-                                <div style="padding:10px 10px 0 10px;">
-                                    <div style="font-family:oswaldbold;font-size:18px;color:#2e6a97;text-align:left;margin:5px 0 0 0;text-transform:uppercase;height:28px;overflow:hidden;">
-                                        Permudah Konsumen, Yamaha Luncurkan Yamaha Kaltim Official di Tokopedia
-                                    </div>
-                                    <div style="font-family:open sans;font-weight:600;font-size:11px;color:#363636;text-align:left;height:45px;overflow:hidden;">
-                                        Kabar gembira untuk teman-teman pengendara motor se-Kalimantan Timur! Kebutuhan masyarakat akan moda transportasi roda dua semakin meningkat. Melihat kebutuhan ini, PT. Surya Timur Sakti Jatim selaku dealer utama motor Yamaha di Kalimantan Timur baru saja meluncurkan official store Yamaha Kaltim di Tokopedia.
-                                    </div>
-                                    <table width=100% cellpadding=0 cellspacing=0 style="margin:10px 0 5px 0;">
-                                    <tr>
-                                        <td align=left>									
-                                            <div style="font-family:open sans;font-weight:600;font-size:11px;color:#3d3d3d;text-transform:uppercase;">
-                                                Kalimantan Timur - 11/06/2020
-                                            </div>
-                                        </td>
-                                        <td align=right>	
-                                            <a href="event-detail/45/Permudah-Konsumen-Yamaha-Luncurkan-Yamaha-Kaltim-Official-di-Tokopedia.html">							
-                                            <div class="transp" style="font-family:oswaldbold;font-size:12px;color:#2e6a97;background-image:url({{ asset('images/arrow-blue.png') }});background-repeat:no-repeat;background-position:center left;width:70px;">
-                                                READ MORE
-                                            </div>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    </table>
-                                </div>
-                            </div>									
-                    </div>
-
-                    <style>
-                        /* jssor slider direction navigator skin 03 css */
-                        /*
-                        .jssord03l              (normal)
-                        .jssord03r              (normal)
-                        .jssord03l:hover        (normal mouseover)
-                        .jssord03r:hover        (normal mouseover)
-                        .jssord03ldn            (mousedown)
-                        .jssord03rdn            (mousedown)
-                        */
-                        .jssord03l, .jssord03r, .jssord03ldn, .jssord03rdn
-                        {
-                            position: absolute;
-                            cursor: pointer;
-                            display: block;
-                            background: {{ asset('img/d03.html') }} no-repeat;
-                            overflow:hidden;
-                        }
-                        .jssord03l { background-position: -3px -33px; }
-                        .jssord03r { background-position: -63px -33px; }
-                        .jssord03l:hover { background-position: -123px -33px; }
-                        .jssord03r:hover { background-position: -183px -33px; }
-                        .jssord03ldn { background-position: -243px -33px; }
-                        .jssord03rdn { background-position: -303px -33px; }
-                    </style>
-                    <!-- Arrow Left -->
-                    <span u="arrowleft" class="jssord03l" style="background: {{ asset('images/btn-newsprev.png') }} no-repeat;width: 44px; height: 44px; top: 0px; left: -40px;">
-                    </span>
-                    <!-- Arrow Right -->
-                    <span u="arrowright" class="jssord03r" style="background: {{ asset('images/btn-newsnext.png') }} no-repeat;width: 44px; height: 44px; top: 0px; right: -42px">
-                    </span>
-                    <script>
-                        jssor_slider1_starter('slider1_container');
-                    </script>
-                </div>
-                <!-- Jssor Slider End -->
-                <img width=0 height=0 />
-            </div>
+        <div style="width:100%;background-image:url({{ asset('images/bg-corak.png') }});background-repeat:no-repeat;background-size:100% auto;padding:15px 0 40px 0;">			
             
             <table width=960px cellpadding=0 cellspacing=0 style="margin:20px 0 0 0;">
             <tr>
                 <td valign=top>
                 
                         <div style="background-image:url({{ asset('images/bg-titlehome.png') }});width:468px;font-family:oswaldbold;font-size:15px;color:#ffffff;border-radius:5px 5px 0 0;height:32px;text-align:center;line-height:32px;">
-                            Photo Gallery
+                            Our Products
                         </div>
-                        <a href="gallery-2.html">
+                        <a href="{{ route('produk.index') }}">
                         <div style="background-image:url({{ asset('data/home_link/1.jpg') }});width:468px;height:230px;text-align:center;">
                         </div>
                         </a>								
@@ -1872,7 +1644,7 @@
                         <div style="background-image:url({{ asset('images/bg-titlehome.png') }});width:230px;font-family:oswaldbold;font-size:15px;color:#ffffff;border-radius:5px 5px 0 0;height:32px;text-align:center;line-height:32px;">
                             Dealers Networks
                         </div>
-                        <a href="dealer-2.html">
+                        <a href="{{ route('network.index') }}">
                         <div style="background-image:url({{ asset('data/home_link/2.jpg') }});width:230px;height:230px;text-align:center;">
                             <img src="{{ asset('images/btn-dealer.png') }}" style="margin-top:100px;">
                         </div>
@@ -1881,9 +1653,9 @@
                 <td valign=top>				
                 
                         <div style="background-image:url({{ asset('images/bg-titlehome.png') }});width:230px;font-family:oswaldbold;font-size:15px;color:#ffffff;border-radius:5px 5px 0 0;height:32px;text-align:center;line-height:32px;">
-                            Upcoming Events
+                            Contact Us
                         </div>					
-                            <a href="event-detaila916.html?id=44">
+                            <a href="{{ route('contact_us') }}">
                             <div style="background-image:url({{ asset('data/event_thumb/44.jpg') }});width:230px;height:230px;background-size:cover;background-position:center center;">
                             </div>
                             </a>			</td>

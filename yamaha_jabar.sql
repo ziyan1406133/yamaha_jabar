@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2020 at 06:56 PM
+-- Generation Time: Dec 07, 2020 at 06:06 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -173,6 +173,7 @@ CREATE TABLE `networks` (
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_head_office` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -181,10 +182,10 @@ CREATE TABLE `networks` (
 -- Dumping data for table `networks`
 --
 
-INSERT INTO `networks` (`id`, `region_id`, `name`, `address`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 2, 'GONDANG LEGI INDAH', 'Jl. Raya Hayam Wuruk (Utara RSI) - Gondang Legi Malang', '879 219', '2020-11-23 09:29:01', '2020-11-23 09:29:01'),
-(2, 1, 'SENTRAL YAMAHA BASRA', 'Jl. Basuki Rachmad 45-47 Surabaya', '531 5588', '2020-11-23 09:29:32', '2020-11-23 09:29:32'),
-(3, 4, 'SENTRAL YAMAHA GAJAH MADA', 'Jl. Gajah Mada 296 Jember', '487 200', '2020-11-23 09:30:05', '2020-11-23 09:30:05');
+INSERT INTO `networks` (`id`, `region_id`, `name`, `address`, `phone`, `is_head_office`, `created_at`, `updated_at`) VALUES
+(1, 2, 'GONDANG LEGI INDAH', 'Jl. Raya Hayam Wuruk (Utara RSI) - Gondang Legi Malang', '879 219', 0, '2020-11-23 09:29:01', '2020-11-23 09:29:01'),
+(2, 1, 'SENTRAL YAMAHA BASRA', 'Jl. Basuki Rachmad 45-47 Surabaya', '531 5588', 1, '2020-11-23 09:29:32', '2020-11-23 09:29:32'),
+(3, 4, 'SENTRAL YAMAHA GAJAH MADA', 'Jl. Gajah Mada 296 Jember', '487 200', 0, '2020-11-23 09:30:05', '2020-11-23 09:30:05');
 
 -- --------------------------------------------------------
 
@@ -209,6 +210,9 @@ CREATE TABLE `products` (
   `category_id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cover` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `spec` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tvc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slider` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -218,8 +222,8 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `cover`, `slider`, `created_at`, `updated_at`) VALUES
-(4, 1, 'Mio S - Smart Sophisticated', 'images/products/cover/1606154054_832.png', 'images/products/slider/1606154054_467.png', '2020-11-23 10:54:14', '2020-11-23 10:54:14');
+INSERT INTO `products` (`id`, `category_id`, `name`, `cover`, `logo`, `spec`, `tvc`, `slider`, `created_at`, `updated_at`) VALUES
+(4, 1, 'Mio S - Smart Sophisticated', 'images/products/cover/1606154054_832.png', 'images/products/logo/1607354798_519.png', 'images/products/spec/1607354798_475.png', 'https://www.youtube.com/embed/Y8liMsWDC80', 'images/products/slider/1606154054_467.png', '2020-11-23 10:54:14', '2020-12-07 08:34:52');
 
 -- --------------------------------------------------------
 

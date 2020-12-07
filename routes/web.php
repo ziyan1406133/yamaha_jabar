@@ -30,3 +30,9 @@ Route::post('feature', 'Backsite\FeatureController@store')->name('feature.store'
 Route::delete('feature/{id}', 'Backsite\FeatureController@destroy')->name('feature.destroy');
 Route::post('color', 'Backsite\ColorController@store')->name('color.store');
 Route::delete('color/{id}', 'Backsite\ColorController@destroy')->name('color.destroy');
+
+Route::get('/produk', 'Frontsite\ProductController@index')->name('produk.index');
+Route::get('/produk/{id}', 'Frontsite\ProductController@show')->name('produk.show');
+
+Route::get('/network', 'Frontsite\NetworkController@index')->name('network.index');
+Route::get('/network/{id}', 'Frontsite\NetworkController@show')->name('network.show');

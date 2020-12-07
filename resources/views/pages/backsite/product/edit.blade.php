@@ -36,6 +36,15 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5 form-group">
+                        <label>TVC</label>
+                    </div>
+                    <div class="col-md-7 form-group">
+                        <input type="text" name="tvc" class="form-control" placeholder="https://www.youtube.com/embed/Y8liMsWDC80"
+                        value="{{ $produk->tvc }}" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 form-group">
                         <label>Gambar Cover</label>
                         <input type="file" name="cover" class="form-control-file">
                     </div>
@@ -50,6 +59,24 @@
                     </div>
                     <div class="col-md-7">
                         <img src="{{ asset($produk->slider) }}" style="height: 200px" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 form-group">
+                        <label>Logo</label>
+                        <input type="file" name="logo" class="form-control-file">
+                    </div>
+                    <div class="col-md-7">
+                        <img src="{{ asset($produk->logo) }}" style="height: 200px" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 form-group">
+                        <label>Specs</label>
+                        <input type="file" name="spec" class="form-control-file">
+                    </div>
+                    <div class="col-md-7">
+                        <img src="{{ asset($produk->spec) }}" style="height: 200px" alt="">
                     </div>
                 </div>
                 <div class="row">
