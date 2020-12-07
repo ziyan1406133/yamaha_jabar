@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2020 at 06:06 PM
+-- Generation Time: Dec 07, 2020 at 06:13 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -39,11 +39,10 @@ CREATE TABLE `categories` (
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Matic', 'images/categories/matic.png', '2020-11-23 08:47:15', '2020-11-23 08:47:15'),
-(2, 'Moped', 'images/categories/moped.png', '2020-11-23 08:47:15', '2020-11-23 08:47:15'),
-(3, 'Sport', 'images/categories/sport.png', '2020-11-23 08:47:15', '2020-11-23 08:47:15'),
-(4, 'Moto GP', 'images/categories/motogp.png', '2020-11-23 08:47:15', '2020-11-23 08:47:15');
+UPDATE `categories` SET `id` = 1,`name` = 'Matic',`image` = 'images/categories/matic.png',`created_at` = '2020-11-23 08:47:15',`updated_at` = '2020-11-23 08:47:15' WHERE `categories`.`id` = 1;
+UPDATE `categories` SET `id` = 2,`name` = 'Moped',`image` = 'images/categories/moped.png',`created_at` = '2020-11-23 08:47:15',`updated_at` = '2020-11-23 08:47:15' WHERE `categories`.`id` = 2;
+UPDATE `categories` SET `id` = 3,`name` = 'Sport',`image` = 'images/categories/sport.png',`created_at` = '2020-11-23 08:47:15',`updated_at` = '2020-11-23 08:47:15' WHERE `categories`.`id` = 3;
+UPDATE `categories` SET `id` = 4,`name` = 'Moto GP',`image` = 'images/categories/motogp.png',`created_at` = '2020-11-23 08:47:15',`updated_at` = '2020-11-23 08:47:15' WHERE `categories`.`id` = 4;
 
 -- --------------------------------------------------------
 
@@ -64,8 +63,7 @@ CREATE TABLE `colors` (
 -- Dumping data for table `colors`
 --
 
-INSERT INTO `colors` (`id`, `product_id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(3, 4, 'Mysterious Red', 'images/color/1606154085_771.png', '2020-11-23 10:54:45', '2020-11-23 10:54:45');
+UPDATE `colors` SET `id` = 3,`product_id` = 4,`name` = 'Mysterious Red',`image` = 'images/color/1606154085_771.png',`created_at` = '2020-11-23 10:54:45',`updated_at` = '2020-11-23 10:54:45' WHERE `colors`.`id` = 3;
 
 -- --------------------------------------------------------
 
@@ -102,9 +100,8 @@ CREATE TABLE `features` (
 -- Dumping data for table `features`
 --
 
-INSERT INTO `features` (`id`, `product_id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(5, 4, 'Lampu LED', 'images/feature/1606154068_629.png', '2020-11-23 10:54:28', '2020-11-23 10:54:28'),
-(6, 4, 'Answer Back System', 'images/feature/1606154077_789.png', '2020-11-23 10:54:37', '2020-11-23 10:54:37');
+UPDATE `features` SET `id` = 5,`product_id` = 4,`name` = 'Lampu LED',`image` = 'images/feature/1606154068_629.png',`created_at` = '2020-11-23 10:54:28',`updated_at` = '2020-11-23 10:54:28' WHERE `features`.`id` = 5;
+UPDATE `features` SET `id` = 6,`product_id` = 4,`name` = 'Answer Back System',`image` = 'images/feature/1606154077_789.png',`created_at` = '2020-11-23 10:54:37',`updated_at` = '2020-11-23 10:54:37' WHERE `features`.`id` = 6;
 
 -- --------------------------------------------------------
 
@@ -129,9 +126,8 @@ CREATE TABLE `messages` (
 -- Dumping data for table `messages`
 --
 
-INSERT INTO `messages` (`id`, `name`, `email`, `company`, `phone`, `fax`, `address`, `content`, `created_at`, `updated_at`) VALUES
-(1, 'nama', 'email@gmail.com', 'company', '093209', '093209', 'PT ARISTA JAYA LESTARI, Jl. Ipik Gandamanah No.176, Munjuljaya, Purwakarta, Jawa Barat 41117\r\nTlp & Wa : 0821 2399 7870\r\nfb & Ig : @promoyamahajabar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat orci cursus, accumsan nisi a, luctus magna. Sed tempus placerat ullamcorper. Integer ut libero in lectus fermentum fermentum. Aliquam in ligula blandit, mattis elit sit amet liber', '2020-11-23 09:50:12', '2020-11-23 09:50:12'),
-(2, 'hello', 'email@email.com', NULL, NULL, NULL, 'address', 'pesan', '2020-11-23 09:50:27', '2020-11-23 09:50:27');
+UPDATE `messages` SET `id` = 1,`name` = 'nama',`email` = 'email@gmail.com',`company` = 'company',`phone` = '093209',`fax` = '093209',`address` = 'PT ARISTA JAYA LESTARI, Jl. Ipik Gandamanah No.176, Munjuljaya, Purwakarta, Jawa Barat 41117\r\nTlp & Wa : 0821 2399 7870\r\nfb & Ig : @promoyamahajabar',`content` = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat orci cursus, accumsan nisi a, luctus magna. Sed tempus placerat ullamcorper. Integer ut libero in lectus fermentum fermentum. Aliquam in ligula blandit, mattis elit sit amet liber',`created_at` = '2020-11-23 09:50:12',`updated_at` = '2020-11-23 09:50:12' WHERE `messages`.`id` = 1;
+UPDATE `messages` SET `id` = 2,`name` = 'hello',`email` = 'email@email.com',`company` = NULL,`phone` = NULL,`fax` = NULL,`address` = 'address',`content` = 'pesan',`created_at` = '2020-11-23 09:50:27',`updated_at` = '2020-11-23 09:50:27' WHERE `messages`.`id` = 2;
 
 -- --------------------------------------------------------
 
@@ -149,17 +145,16 @@ CREATE TABLE `migrations` (
 -- Dumping data for table `migrations`
 --
 
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(11, '2014_10_12_000000_create_users_table', 1),
-(12, '2014_10_12_100000_create_password_resets_table', 1),
-(13, '2019_08_19_000000_create_failed_jobs_table', 1),
-(14, '2020_11_23_152056_create_categories_table', 1),
-(15, '2020_11_23_152115_create_regions_table', 1),
-(16, '2020_11_23_152123_create_networks_table', 1),
-(17, '2020_11_23_152219_create_messages_table', 1),
-(18, '2020_11_23_152235_create_products_table', 1),
-(19, '2020_11_23_152244_create_features_table', 1),
-(20, '2020_11_23_152257_create_colors_table', 1);
+UPDATE `migrations` SET `id` = 11,`migration` = '2014_10_12_000000_create_users_table',`batch` = 1 WHERE `migrations`.`id` = 11;
+UPDATE `migrations` SET `id` = 12,`migration` = '2014_10_12_100000_create_password_resets_table',`batch` = 1 WHERE `migrations`.`id` = 12;
+UPDATE `migrations` SET `id` = 13,`migration` = '2019_08_19_000000_create_failed_jobs_table',`batch` = 1 WHERE `migrations`.`id` = 13;
+UPDATE `migrations` SET `id` = 14,`migration` = '2020_11_23_152056_create_categories_table',`batch` = 1 WHERE `migrations`.`id` = 14;
+UPDATE `migrations` SET `id` = 15,`migration` = '2020_11_23_152115_create_regions_table',`batch` = 1 WHERE `migrations`.`id` = 15;
+UPDATE `migrations` SET `id` = 16,`migration` = '2020_11_23_152123_create_networks_table',`batch` = 1 WHERE `migrations`.`id` = 16;
+UPDATE `migrations` SET `id` = 17,`migration` = '2020_11_23_152219_create_messages_table',`batch` = 1 WHERE `migrations`.`id` = 17;
+UPDATE `migrations` SET `id` = 18,`migration` = '2020_11_23_152235_create_products_table',`batch` = 1 WHERE `migrations`.`id` = 18;
+UPDATE `migrations` SET `id` = 19,`migration` = '2020_11_23_152244_create_features_table',`batch` = 1 WHERE `migrations`.`id` = 19;
+UPDATE `migrations` SET `id` = 20,`migration` = '2020_11_23_152257_create_colors_table',`batch` = 1 WHERE `migrations`.`id` = 20;
 
 -- --------------------------------------------------------
 
@@ -182,10 +177,9 @@ CREATE TABLE `networks` (
 -- Dumping data for table `networks`
 --
 
-INSERT INTO `networks` (`id`, `region_id`, `name`, `address`, `phone`, `is_head_office`, `created_at`, `updated_at`) VALUES
-(1, 2, 'GONDANG LEGI INDAH', 'Jl. Raya Hayam Wuruk (Utara RSI) - Gondang Legi Malang', '879 219', 0, '2020-11-23 09:29:01', '2020-11-23 09:29:01'),
-(2, 1, 'SENTRAL YAMAHA BASRA', 'Jl. Basuki Rachmad 45-47 Surabaya', '531 5588', 1, '2020-11-23 09:29:32', '2020-11-23 09:29:32'),
-(3, 4, 'SENTRAL YAMAHA GAJAH MADA', 'Jl. Gajah Mada 296 Jember', '487 200', 0, '2020-11-23 09:30:05', '2020-11-23 09:30:05');
+UPDATE `networks` SET `id` = 1,`region_id` = 2,`name` = 'GONDANG LEGI INDAH',`address` = 'Jl. Raya Hayam Wuruk (Utara RSI) - Gondang Legi Malang',`phone` = '879 219',`is_head_office` = 0,`created_at` = '2020-11-23 09:29:01',`updated_at` = '2020-11-23 09:29:01' WHERE `networks`.`id` = 1;
+UPDATE `networks` SET `id` = 2,`region_id` = 1,`name` = 'SENTRAL YAMAHA BASRA',`address` = 'Jl. Basuki Rachmad 45-47 Surabaya',`phone` = '531 5588',`is_head_office` = 1,`created_at` = '2020-11-23 09:29:32',`updated_at` = '2020-11-23 09:29:32' WHERE `networks`.`id` = 2;
+UPDATE `networks` SET `id` = 3,`region_id` = 4,`name` = 'SENTRAL YAMAHA GAJAH MADA',`address` = 'Jl. Gajah Mada 296 Jember',`phone` = '487 200',`is_head_office` = 0,`created_at` = '2020-11-23 09:30:05',`updated_at` = '2020-11-23 09:30:05' WHERE `networks`.`id` = 3;
 
 -- --------------------------------------------------------
 
@@ -222,8 +216,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `name`, `cover`, `logo`, `spec`, `tvc`, `slider`, `created_at`, `updated_at`) VALUES
-(4, 1, 'Mio S - Smart Sophisticated', 'images/products/cover/1606154054_832.png', 'images/products/logo/1607354798_519.png', 'images/products/spec/1607354798_475.png', 'https://www.youtube.com/embed/Y8liMsWDC80', 'images/products/slider/1606154054_467.png', '2020-11-23 10:54:14', '2020-12-07 08:34:52');
+UPDATE `products` SET `id` = 4,`category_id` = 1,`name` = 'Mio S - Smart Sophisticated',`cover` = 'images/products/cover/1606154054_832.png',`logo` = 'images/products/logo/1607354798_519.png',`spec` = 'images/products/spec/1607354798_475.png',`tvc` = 'https://www.youtube.com/embed/Y8liMsWDC80',`slider` = 'images/products/slider/1606154054_467.png',`created_at` = '2020-11-23 10:54:14',`updated_at` = '2020-12-07 08:34:52' WHERE `products`.`id` = 4;
 
 -- --------------------------------------------------------
 
@@ -242,10 +235,9 @@ CREATE TABLE `regions` (
 -- Dumping data for table `regions`
 --
 
-INSERT INTO `regions` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Surabaya', '2020-11-23 09:18:35', '2020-11-23 09:18:35'),
-(2, 'Malang', '2020-11-23 09:18:40', '2020-11-23 09:18:40'),
-(4, 'Jember', '2020-11-23 09:18:59', '2020-11-23 09:18:59');
+UPDATE `regions` SET `id` = 1,`name` = 'Surabaya',`created_at` = '2020-11-23 09:18:35',`updated_at` = '2020-11-23 09:18:35' WHERE `regions`.`id` = 1;
+UPDATE `regions` SET `id` = 2,`name` = 'Malang',`created_at` = '2020-11-23 09:18:40',`updated_at` = '2020-11-23 09:18:40' WHERE `regions`.`id` = 2;
+UPDATE `regions` SET `id` = 4,`name` = 'Jember',`created_at` = '2020-11-23 09:18:59',`updated_at` = '2020-11-23 09:18:59' WHERE `regions`.`id` = 4;
 
 -- --------------------------------------------------------
 
@@ -266,8 +258,7 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$10$kl0mRGHActifGLZ4ZzC7N.3uF1NubxLVIrGFnjtO2GpNAcRa1lC0a', NULL, '2020-11-23 08:47:15', '2020-11-23 08:47:15');
+UPDATE `users` SET `id` = 1,`username` = 'admin',`password` = '$2y$10$kl0mRGHActifGLZ4ZzC7N.3uF1NubxLVIrGFnjtO2GpNAcRa1lC0a',`remember_token` = NULL,`created_at` = '2020-11-23 08:47:15',`updated_at` = '2020-11-23 08:47:15' WHERE `users`.`id` = 1;
 
 --
 -- Indexes for dumped tables
