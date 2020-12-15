@@ -20,4 +20,9 @@ class ProductController extends Controller
         $produk = Product::with('features')->with('colors')->find($id);
         return view('pages.frontsite.product.show', compact('produk'));
     }
+
+    public function tech()
+    {
+        return view('pages.frontsite.product.tech');
+    }
 }

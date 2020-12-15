@@ -36,7 +36,9 @@
                 <div class="row">
                     <div class="col-md-5 form-group">
                         <label>TVC</label>
-                        <input type="text" name="cover" class="form-control-file" placeholder="https://www.youtube.com/embed/Y8liMsWDC80">
+                    </div>
+                    <div class="col-md-7 form-group">
+                        <input type="text" name="tvc" class="form-control" placeholder="https://www.youtube.com/embed/Y8liMsWDC80">
                     </div>
                 </div>
                 <div class="row">

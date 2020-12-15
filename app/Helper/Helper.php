@@ -14,37 +14,11 @@ if (!function_exists('activeClass'))
     }
 }
 
-
-if (!function_exists('list_mapel'))
+if (!function_exists('isActive'))
 {
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return array list_mapel
-     */
-    function list_mapel()
+    function isActive($is_active)
     {
-        $list_mapel = array(
-            "biologi" => "Biologi",
-            "kimia" => "Kimia",
-            "fisika" => "Fisika",
-            "sosiologi" => "Sosiologi",
-            "sejarah" => "Sejarah",
-            "ekonomi" => "Ekonomi",
-            "al_quran" => "Al-Qur'an",
-            "ilmu_kalam" => "Ilmu Kalam"
-        );
-        return $list_mapel;
+        $status = [ 'Nonaktif', 'Aktif'];
+        return $status[$is_active];
     }
 }
-
-
-if (!function_exists('all_categories'))
-{
-    function all_categories() {
-        $categories = array("biologi", "kimia", "fisika", "sosiologi", "sejarah", "ekonomi", "al_quran", "ilmu_kalam");
-        return $categories;
-    }
-}
-

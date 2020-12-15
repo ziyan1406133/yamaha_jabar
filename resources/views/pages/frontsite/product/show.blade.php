@@ -1,5 +1,17 @@
 @extends('layouts.frontsite')
 
+@section('head')
+    <style>
+        @media screen and (min-width: 992px) {
+            .color-list {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+    </style>
+@endsection
+
+
 @section('content')
 <hr style="border:0px solid;border-bottom:0px solid #c8c8c8;padding:0 0 0 0;margin:0 0 0 0;">	</div>
 	
@@ -198,32 +210,36 @@
 
         <body style="background-color:#f6f6f6;">
         <center>
-            <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 900px; height: 323px;margin:0 0 0 0;">
+            {{-- <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 900px; height: 323px;margin:0 0 0 0;">
                 <!-- Slides Container -->
-                <div u="slides" style="cursor: move;  width: 900px; height: 323px; overflow: hidden;">
-                    @foreach ($produk->colors as $color)
-                        <div>
+                <div u="slides" style="cursor: move;  width: 900px; height: 323px; overflow: hidden;"> --}}
+                    <div class="row color-list">
+                        @foreach ($produk->colors as $color)
+                        <div class="col-md-2 col-sm-4 col-2">
                             <div>
-                                <img u="image" src="{{ asset($color->image) }}"/>
+                                <div>
+                                    <img u="image" src="{{ asset($color->image) }}"/>
+                                </div>
+                                <table>
+                                <tr>
+                                    <td>
+                                        <img src="{{ asset('images/square-black.png') }}">
+                                    </td>
+                                    <td>
+                                        <div style="font-family:open sans;font-weight:600;font-size:18px;color:#000000;">
+                                            {{ $color->name }}
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <img src="{{ asset('images/square-black.png') }}">
+                                    </td>
+                                </tr>
+                                </table>
                             </div>
-                            <table>
-                            <tr>
-                                <td>
-                                    <img src="{{ asset('images/square-black.png') }}">
-                                </td>
-                                <td>
-                                    <div style="font-family:open sans;font-weight:600;font-size:18px;color:#000000;">
-                                        {{ $color->name }}
-                                    </div>
-                                </td>
-                                <td>
-                                    <img src="{{ asset('images/square-black.png') }}">
-                                </td>
-                            </tr>
-                            </table>
                         </div>
-                    @endforeach
-                </div>
+                        @endforeach
+                    </div>
+                {{-- </div>
         
             
                 <!-- navigator container -->
@@ -266,7 +282,7 @@
                     jssor_slider1_starter('slider1_container');
                 </script>
             </div>
-            <!-- Jssor Slider End -->
+            <!-- Jssor Slider End --> --}}
             <img width=0 height=0 />
         </center>
 

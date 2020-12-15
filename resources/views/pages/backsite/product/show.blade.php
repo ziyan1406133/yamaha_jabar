@@ -17,12 +17,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-center">
-                        <img src="{{ asset($produk->cover) }}" style="height: 200px" alt="">
+                        <img src="{{ asset($produk->cover) }}" style="height: 200px; max-width: 75%" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center">
-                        <img src="{{ asset($produk->slider) }}" style="height: 200px" alt="">
+                        <img src="{{ asset($produk->slider) }}" style="height: 200px; max-width: 75%" alt="">
                     </div>
                 </div>
             </div>
@@ -30,23 +30,25 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-center">
-                        <img src="{{ asset($produk->spec) }}" style="height: 200px" alt="">
+                        <img src="{{ asset($produk->spec) }}" style="height: 200px; max-width: 75%" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center">
-                        <img src="{{ asset($produk->logo) }}" style="height: 200px" alt="">
+                        <img src="{{ asset($produk->logo) }}" style="height: 200px; max-width: 75%" alt="">
                     </div>
                 </div>
             </div>
-            <br><br>
-            <div class="row">
-                <div class="text-center">
-                    <iframe width="560" height="315px"
-                    src="{{ $produk->tvc }}">
-                    </iframe>
+            @if ($produk->tvc !== null)
+                <br><br>
+                <div class="row">
+                    <div class="text-center">
+                        <iframe width="560" height="315px"
+                        src="{{ $produk->tvc }}">
+                        </iframe>
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
     <div class="panel panel-headline">

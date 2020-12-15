@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.frontsite.homepage');
+        $categories = Category::with('products')->orderBy('name', 'asc')->get();
+        return view('pages.frontsite.homepage', compact('categories'));
     }
 
     /**

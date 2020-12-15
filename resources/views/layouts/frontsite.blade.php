@@ -98,11 +98,11 @@
 <center>
 	<div style="width:100%;position:relative;z-index:12">
 
-@include('layouts.partial.navbar')
+	@include('layouts.partial.navbar')
 
-@yield('content')
+	@yield('content')
 
-@include('layouts.partial.footer')
+	@include('layouts.partial.footer')
 
 </center>
 

@@ -51,7 +51,7 @@
 					<img src="{{ asset('images/separator.png') }}">
 				</td>
 				<td valign=bottom align=center>
-					<a href="company.html">
+					<a href="{{ route('profile.company') }}">
 						<div class="head" >
 							PROFILE
 						</div>
@@ -67,7 +67,7 @@
 						  <ul>
 							<li><a href='{{ route('produk.index') }}'><span>PRODUCT LIST</span></a></li>
 							<li><a href="{{ asset('data/price_pdf/1.pdf') }}" target="_blank"><span>PRICE LIST</span></a></li>
-							<li><a href='technology.html'><span>TECHNOLOGY</span></a></li>
+							<li><a href='{{ route('produk.tech') }}'><span>TECHNOLOGY</span></a></li>
 						  </ul>
 					   </li>
 					</ul>
@@ -87,7 +87,7 @@
 					<img src="{{ asset('images/separator.png') }}">
 				</td>
 				<td valign=bottom align=center>
-					<a href="career.html">
+					<a href="{{ route('careers.index') }}">
 						<div class="head" >
 							CAREER
 						</div>
