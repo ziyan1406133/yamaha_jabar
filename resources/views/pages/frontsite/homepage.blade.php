@@ -10,7 +10,6 @@
     <script src="{{ asset('js/hover/jquery.min.js') }}"></script>
     <script src="{{ asset('js/hover/hover_pack.js') }}"></script>
 
-
     <!-- slider JS files -->    
     <script class="rs-file" src="{{ asset('css/royal/royalslider/jquery-1.8.3.min.js') }}"></script>
     <script class="rs-file" src="{{ asset('css/royal/royalslider/jquery.royalslider.min.js') }}"></script>
@@ -217,47 +216,37 @@
         };
     </script>
 
-
-
-    <script type="text/javascript">
-    $('div.kategori').click(function() {
-        
-    });	
-    </script>
-
-
     <style>
-                
-            div.kategori {
-                padding:0px 25px 6px 25px;
-                height:100%;
-            }		
-            
-            div.kategori:hover {
-                background-color:rgba(16, 154, 226, 0.3);
-            }		
-            
-            div.kategori.active {
-                background-color:rgba(16, 154, 226, 0.3);
-            }
-            
-            div.motor {
-                display:none;	
-                text-align:center;
-                max-height: 0px;
-                overflow: hidden;
-                padding:0px 10px 0px 10px;
-                border-radius:5px;
-                margin:10px 0 0 0;
-            }
 
-            div.motor.active {
-                display:inline-block;
-                max-height: 1000px;	
-                padding:5px 10px 5px 10px;				
-            }
+        div.kategori {
+            padding:0px 25px 6px 25px;
+            height:100%;
+        }		
+        
+        div.kategori:hover {
+            background-color:rgba(16, 154, 226, 0.3);
+        }		
+        
+        div.kategori.active {
+            background-color:rgba(16, 154, 226, 0.3);
+        }
+        
+        div.motor {
+            display:none;	
+            text-align:center;
+            max-height: 0px;
+            overflow: hidden;
+            padding:0px 10px 0px 10px;
+            border-radius:5px;
+            margin:10px 0 0 0;
+        }
+
+        div.motor.active {
+            display:inline-block;
+            max-height: 1000px;	
+            padding:5px 10px 5px 10px;				
+        }			
     </style>
-
     <style>	
         #style-1::-webkit-scrollbar-track
         {
@@ -342,15 +331,17 @@
                 <tr>
                     @foreach ($categories as $category)
                     <td>						
-                        <div class="kategoribtn">
+                        <div class="kategori" data-cat_id="{{ $category->id }}">
                             <img src="{{ asset($category->image) }}" style="margin-top:6px;">
                         </div>
                     </td>
+                        @if (!$loop->last)
                             <td>
                                 <div>
                                     <img src="{{ asset('images/cat-separator.png') }}">
                                 </div>
                             </td>
+                        @endif
                     @endforeach				
                 </tr>
                 </table>
@@ -361,7 +352,7 @@
         </div>	
         </a>
         @foreach ($categories as $category)
-            <div class="motor active" id="motor{{ $category->id }}" style="top:-25px;position:relative;overflow-x:auto;width:80%;padding:0 50px 0 50px;">
+            <div class="motor {{ $loop->first ? 'active' : '' }}" id="motor_{{ $category->id }}" style="top:-25px;position:relative;overflow-x:auto;width:80%;padding:0 50px 0 50px;">
                 <center>
                     <table border=0 align=center style="margin:0px 0 0px 0;">
                         <tr>
@@ -550,4 +541,13 @@
     <script src="{{ asset('jquery/animation/jquery.appear.js') }}"></script>
     <script src="{{ asset('jquery/animation/jquery.validate.js') }}"></script>
     <script src="{{ asset('jquery/animation/theme.js') }}"></script>
+    
+
+    <script>
+        $('.kategori').click(function() {
+            const id = $(this).data('cat_id');
+            $('.motor').removeClass('active');
+            $('#motor_'+id).addClass('active');
+        });	
+    </script>
 @endsection
