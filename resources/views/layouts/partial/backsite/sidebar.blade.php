@@ -16,6 +16,7 @@
                     </div>
                 </li>
                 <li><a href="{{ route('product.index') }}" class="{{ activeClass('product') }}"><i class="lnr lnr-bicycle"></i> <span>Products</span></a></li>
+                <li><a href="{{ route('testimony.index') }}" class="{{ activeClass('testimony') }}"><i class="lnr lnr-star"></i> <span>Testimony</span></a></li>
                 <li><a href="{{ route('career.index') }}" class="{{ activeClass('career') }}"><i class="lnr lnr-flag"></i> <span>Career</span></a></li>
                 <li><a href="{{ route('message.index') }}" class="{{ activeClass('message') }}"><i class="lnr lnr-envelope"></i> <span>Messages</span></a></li>
             </ul>

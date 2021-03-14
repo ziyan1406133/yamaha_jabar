@@ -61,7 +61,7 @@
 					<img src="{{ asset('images/separator.png') }}">
 				</td>
 				<td valign=bottom align=center>
-					<a href="{{ route('profile.company') }}">
+					<a href="{{ route('testimoni.index') }}">
 						<div class="head" >
 							TESTIMONY
 						</div>

@@ -20,42 +20,46 @@
         
 
 
-<table style="position:relative;z-index:99;">
-<tr>
-<td>
-    <a href="{{ route('profile.company') }}">
-    <div class="menuprof" style="height: 65px">
-        Company<br>Profile
+        <table style="position:relative;z-index:99;">
+            <tr>
+                <td>
+                    <a href="{{ route('profile.company') }}">
+                    <div class="menuprof" style="height: 65px">
+                        Company<br>Profile
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ route('profile.history') }}">
+                    <div class="menuprof" style="height: 65px" >
+                        Our<br>History
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ route('profile.vision-mission') }}">
+                    <div class="menuprof" style="height: 65px">
+                        Vision<br>& Mission
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ route('profile.awards') }}">
+                    <div class="menuprof" style="height: 65px">
+                        Company<br>Awards
+                    </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{{ route('profile.partner') }}">
+                    <div class="menuprof" style="height: 65px">
+                        Partner<br>& Affiliates
+                    </div>
+                    </a>
+                </td>
+            </tr>
+        </table>			
+
+        <hr style="border:0px solid;border-bottom:0px solid #c8c8c8;padding:0 0 0 0;margin:0 0 0 0;">	
     </div>
-    </a>
-</td>
-<td>
-    <a href="{{ route('profile.history') }}">
-    <div class="menuprof" style="height: 65px" >
-        Our<br>History
-    </div>
-    </a>
-</td>
-<td>
-    <a href="{{ route('profile.vision-mission') }}">
-    <div class="menuprof" style="height: 65px">
-        Vision<br>& Mission
-    </div>
-    </a>
-</td>
-<td>
-    <a href="{{ route('profile.awards') }}">
-    <div class="menuprof" style="height: 65px">
-        Company<br>Awards
-    </div>
-    </a>
-</td>
-<td>
-    <a href="{{ route('profile.partner') }}">
-    <div class="menuprof" style="height: 65px">
-        Partner<br>& Affiliates
-    </div>
-    </a>
-</td>
-</tr>
-</table>			
+</div>

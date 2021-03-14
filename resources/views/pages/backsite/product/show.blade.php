@@ -1,6 +1,6 @@
 @extends('layouts.backsite')
 
-@section('css')
+@section('head')
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
 @endsection
 

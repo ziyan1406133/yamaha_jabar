@@ -67,9 +67,17 @@ class ProductController extends Controller
         $request->file('logo')->move('public/images/products/logo/', $image_name);
         $produk->logo = 'images/products/logo/'.$image_name;
 
-        $image_name	= time().'_'.rand(100,999).'.png';
-        $request->file('spec')->move('public/images/products/spec/', $image_name);
-        $produk->spec = 'images/products/spec/'.$image_name;
+        if($request->hasFile('spec')) {
+            $image_name	= time().'_'.rand(100,999).'.png';
+            $request->file('spec')->move('public/images/products/spec/', $image_name);
+            $produk->spec = 'images/products/spec/'.$image_name;
+        }
+
+        if($request->hasFile('price_detail')) {
+            $image_name	= time().'_'.rand(100,999).'.png';
+            $request->file('price_detail')->move('public/images/products/price_detail/', $image_name);
+            $produk->price_detail = 'images/products/price_detail/'.$image_name;
+        }
 
         $produk->save();
 
@@ -169,6 +177,20 @@ class ProductController extends Controller
             $request->file('spec')->move('public/images/products/spec/', $image_name);
             $produk->spec = 'images/products/spec/'.$image_name;
         }
+        
+        if($request->hasFile('price_detail')) {
+
+            if($produk->price_detail !== null) {
+                $file = public_path($produk->price_detail);
+                if (file_exists($file)) {
+                    unlink($file);
+                }
+            }
+
+            $image_name	= time().'_'.rand(100,999).'.png';
+            $request->file('price_detail')->move('public/images/products/price_detail/', $image_name);
+            $produk->price_detail = 'images/products/price_detail/'.$image_name;
+        }
 
         $produk->save();
 
@@ -190,22 +212,42 @@ class ProductController extends Controller
             unlink($file);
         }
         $file = public_path($produk->slider);
-        if (file_exists($file)) {
-            unlink($file);
+        if(!is_dir($file)){
+            if (file_exists($file)) {
+                unlink($file);
+            }
+        }
+
+        $file = public_path($produk->spec);
+        if(!is_dir($file)){
+            if (file_exists($file)) {
+                unlink($file);
+            }
+        }
+
+        $file = public_path($produk->price_detail);
+        if(!is_dir($file)){
+            if (file_exists($file)) {
+                unlink($file);
+            }
         }
 
         foreach($produk->features as $feature)
         {
             $file = public_path($feature->image);
-            if (file_exists($file)) {
-                unlink($file);
+            if(!is_dir($file)){
+                if (file_exists($file)) {
+                    unlink($file);
+                }
             }
         }
         foreach($produk->colors as $color)
         {
             $file = public_path($color->image);
-            if (file_exists($file)) {
-                unlink($file);
+            if(!is_dir($file)){
+                if (file_exists($file)) {
+                    unlink($file);
+                }
             }
         }
 

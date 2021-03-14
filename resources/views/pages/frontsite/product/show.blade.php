@@ -1,6 +1,7 @@
 @extends('layouts.frontsite')
 
 @section('head')
+    <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
     <style>
         @media screen and (min-width: 992px) {
             .color-list {
@@ -121,42 +122,60 @@
 	</div> --}}
 	
 	<a name="features">
-	<div style="background-image:url('images/bg2.png');padding:20px 0 20px 0;">			
-		<table>
-		<tr>
-			<td>
-				<img src="{{ asset('images/icon-title.png') }}">
-			</td>
-			<td>
-				<div style="font-family:oswald;font-size:25px;color:#185698;text-transform:uppercase;">
-					{{ $produk->name }} <font style="color:#2f2f2f;">FEATURES</font>
-				</div>
-			</td>
-			<td>
-				<img src="{{ asset('images/icon-title.png') }}">
-			</td>
-		</tr>
-		</table>
-		
-		<table cellpadding=10 style="width:960px;">
-	<tr>
-            @foreach ($produk->features as $feature)
-                <td align=center valign=top>
-                    <img src="{{ asset($feature->image) }}" width=310px>
-                    <div style="font-family:open sans;font-weight:600;font-size:20px;width:300px;color:#2d2d2d;margin:5px 0 0 0;">
-                        {{ $feature->name }}
-                    </div>
-                </td>
-            @endforeach
-		</table>
-		
-		<a href="#top">
-		<div style="margin:30px 0 0 0;">
-			<img src="{{ asset('images/btn-detailtop.png') }}">		
-		</div>
-		</a>
-	</div>
+        <div style="background-image:url('images/bg2.png');padding:20px 0 20px 0;">			
+            <table>
+                <tr>
+                    <td>
+                        <img src="{{ asset('images/icon-title.png') }}">
+                    </td>
+                    <td>
+                        <div style="font-family:oswald;font-size:25px;color:#185698;text-transform:uppercase;">
+                            {{ $produk->name }} <font style="color:#2f2f2f;">FEATURES</font>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="{{ asset('images/icon-title.png') }}">
+                    </td>
+                </tr>
+            </table>
+            
+            <table cellpadding=10 style="width:960px;">
+                <tr>
+                    @foreach ($produk->features as $feature)
+                        <td align=center valign=top>
+                            <img src="{{ asset($feature->image) }}" width=310px>
+                            <div style="font-family:open sans;font-weight:600;font-size:20px;width:300px;color:#2d2d2d;margin:5px 0 0 0;">
+                                {{ $feature->name }}
+                            </div>
+                        </td>
+                    @endforeach
+            </table>
+            
+            <a href="#top">
+                <div style="margin:30px 0 0 0;">
+                    <img src="{{ asset('images/btn-detailtop.png') }}">		
+                </div>
+            </a>
+        </div>
 	</a>
+				
+	
+    @if ($produk->price_detail !== NULL)
+        <a name="price_detail">
+            <div style="background-image:url({{ asset('images/bg3.png') }});padding:30px 0 30px 0;">
+                <div style="width:960px;">
+                    <a href="#" data-toggle="modal" data-target="#priceDetail" class="btn btn-success">
+                        LIHAT DETAIL HARGA DAN ANGSURAN
+                    </a>
+                </div>
+                <a href="#top">
+                <div style="margin:30px 0 0 0;">
+                    <img src="{{ asset('images/btn-detailtop.png') }}">		
+                </div>
+                </a>
+            </div>
+        </a>
+    @endif
 	
 	@if ($produk->spec !== null)
         <a name="specs">
@@ -187,8 +206,7 @@
             </div>
         </a>	
     @endif
-				
-	
+    
 	<a name="colors">
 	<div style="background-color:#f6f6f6;padding:30px 0 30px 0;">
 		<table style="margin:0 0 20px 0;">
@@ -318,6 +336,9 @@
         </a>	
     @endif
 		
+@if ($produk->price_detail !== NULL)
+    @include('pages.frontsite.product.modal.price_detail')
+@endif
 	
 <hr style="border:0px solid;border-bottom:1px solid #efefef">
 @endsection
@@ -354,6 +375,8 @@
     </script>
 
 
+	<script src="{{ asset('klorofilTemplate/assets/vendor/jquery/jquery.min.js') }}"></script>
+	<script src="{{ asset('klorofilTemplate/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('jquery/animation/plugins.js') }} "></script>
     <script src="{{ asset('jquery/animation/jquery.appear.js') }} "></script>
     <script src="{{ asset('jquery/animation/jquery.validate.js') }} "></script>

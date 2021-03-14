@@ -43,7 +43,7 @@
                         value="{{ $produk->tvc }}" >
                     </div>
                 </div>
-                <div class="row">
+                <div class="row"  style="margin-bottom: 50px">
                     <div class="col-md-5 form-group">
                         <label>Gambar Cover</label>
                         <input type="file" name="cover" class="form-control-file">
@@ -52,7 +52,7 @@
                         <img src="{{ asset($produk->cover) }}" style="height: 200px" alt="">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row"  style="margin-bottom: 50px">
                     <div class="col-md-5 form-group">
                         <label>Gambar Slider</label>
                         <input type="file" name="slider" class="form-control-file">
@@ -61,7 +61,7 @@
                         <img src="{{ asset($produk->slider) }}" style="height: 200px" alt="">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row"  style="margin-bottom: 50px">
                     <div class="col-md-5 form-group">
                         <label>Logo</label>
                         <input type="file" name="logo" class="form-control-file">
@@ -70,7 +70,7 @@
                         <img src="{{ asset($produk->logo) }}" style="height: 200px" alt="">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row"  style="margin-bottom: 50px">
                     <div class="col-md-5 form-group">
                         <label>Specs</label>
                         <input type="file" name="spec" class="form-control-file">
@@ -79,7 +79,16 @@
                         <img src="{{ asset($produk->spec) }}" style="height: 200px" alt="">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row"  style="margin-bottom: 50px">
+                    <div class="col-md-5 form-group">
+                        <label>Detail Harga</label>
+                        <input type="file" name="price_detail" class="form-control-file">
+                    </div>
+                    <div class="col-md-7">
+                        <img src="{{ asset($produk->price_detail) }}" style="height: 200px" alt="">
+                    </div>
+                </div>
+                <div class="row"  style="margin-bottom: 50px">
                     <div class="col-md-12">
                         <button type="submit" class="pull-right btn btn-primary">Simpan</button>
                     </div>
