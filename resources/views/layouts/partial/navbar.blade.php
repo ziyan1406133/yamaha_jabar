@@ -61,6 +61,16 @@
 					<img src="{{ asset('images/separator.png') }}">
 				</td>
 				<td valign=bottom align=center>
+					<a href="{{ route('profile.company') }}">
+						<div class="head" >
+							TESTIMONY
+						</div>
+					</a>
+				</td>
+				<td valign=bottom style="padding:0px 0px 15px 0px;">
+					<img src="{{ asset('images/separator.png') }}">
+				</td>
+				<td valign=bottom align=center>
 					<div id='cssmenu'>
 					<ul>
 					   <li class='has-sub'><a href='{{ route('produk.index') }}' ><span>PRODUCT</span></a>
